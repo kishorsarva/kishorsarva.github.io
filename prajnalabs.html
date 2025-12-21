@@ -10,89 +10,109 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-bold text-xl text-gray-900 tracking-tight">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></span>
-            <ul class="flex space-x-6 font-semibold text-gray-600 text-sm">
-                <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
-                <li><a href="services.html" class="hover:text-indigo-600">Services</a></li>
-                <li><a href="team.html" class="hover:text-indigo-600">Team</a></li>
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-lg md:text-xl text-gray-900 tracking-tight">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></span>
+            </div>
+            
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <ul id="menu" class="hidden md:flex space-x-8 font-semibold text-gray-600 text-sm">
+                <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+                <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
+                <li><a href="team.html" class="hover:text-indigo-600 transition">Team</a></li>
                 <li><a href="prajnalabs.html" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">PrajñāLabs</a></li>
-                <li><a href="pramana.html" class="hover:text-indigo-600">Pramāṇa</a></li>
-                <li><a href="contact.html" class="hover:text-indigo-600">Contact</a></li>
+                <li><a href="pramana.html" class="hover:text-indigo-600 transition">Pramāṇa</a></li>
+                <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu" class="hidden bg-white border-b border-gray-100 md:hidden">
+            <ul class="flex flex-col p-6 space-y-4 font-semibold text-gray-600 text-sm text-center">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="prajnalabs.html" class="text-indigo-600">PrajñāLabs</a></li>
+                <li><a href="pramana.html">Pramāṇa</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container mx-auto p-8 max-w-6xl">
-        <header class="text-center my-16">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+    <div class="container mx-auto p-6 md:p-8 max-w-6xl">
+        <header class="text-center my-10 md:my-16">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
                 PrajñāLabs <span class="text-indigo-600">Connect</span>
             </h1>
-            <p class="text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
+            <p class="text-base md:text-lg text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
                 Join an emerging ecosystem of researchers and engineers building the next generation of industrial IP.
             </p>
         </header>
 
-        <div class="grid md:grid-cols-3 gap-6 mb-20">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 md:mb-20">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center transition-transform hover:scale-105">
                 <div class="text-3xl mb-3">💧</div>
                 <h3 class="font-bold text-gray-900">Multiphase Flows</h3>
-                <p class="text-xs text-gray-500 mt-2">Droplets & Additive Manufacturing</p>
+                <p class="text-[10px] md:text-xs text-gray-500 mt-2">Droplets & Additive Manufacturing</p>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center transition-transform hover:scale-105">
                 <div class="text-3xl mb-3">⚡</div>
                 <h3 class="font-bold text-gray-900">Energy Systems</h3>
-                <p class="text-xs text-gray-500 mt-2">Solar & High-Altitude Turbines</p>
+                <p class="text-[10px] md:text-xs text-gray-500 mt-2">Solar & High-Altitude Turbines</p>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center transition-transform hover:scale-105">
                 <div class="text-3xl mb-3">🦾</div>
                 <h3 class="font-bold text-gray-900">Human Augmentation</h3>
-                <p class="text-xs text-gray-500 mt-2">Indigenous Robotic Exoskeletons</p>
+                <p class="text-[10px] md:text-xs text-gray-500 mt-2">Indigenous Robotic Exoskeletons</p>
             </div>
         </div>
 
-        <div class="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden lg:flex items-stretch border border-gray-100">
-            <div class="lg:w-5/12 p-12 bg-gray-900 text-white">
-                <h2 class="text-3xl font-bold mb-6">Build With Us</h2>
-                <p class="text-gray-400 mb-8 leading-relaxed">
+        <div class="bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row items-stretch border border-gray-100">
+            <div class="lg:w-5/12 p-10 md:p-12 bg-gray-900 text-white">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">Build With Us</h2>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm md:text-base">
                     We are opening our research verticals for early collaborations. Be part of the foundation of <b>PrajñāLabs Connect</b>.
                 </p>
-                <ul class="space-y-6 text-sm">
+                <ul class="space-y-6 text-xs md:text-sm">
                     <li class="flex items-start space-x-3">
-                        <span class="bg-indigo-600 p-1 rounded-full text-[8px] mt-1">✓</span>
+                        <span class="bg-indigo-600 p-1 rounded-full text-[8px] mt-1 shrink-0">✓</span>
                         <span><b>Collaborators:</b> Faculty & PhD scholars looking for industrial relevance.</span>
                     </li>
                     <li class="flex items-start space-x-3">
-                        <span class="bg-indigo-600 p-1 rounded-full text-[8px] mt-1">✓</span>
+                        <span class="bg-indigo-600 p-1 rounded-full text-[8px] mt-1 shrink-0">✓</span>
                         <span><b>Fellows:</b> High-potential students eager for deep-tech R&D experience.</span>
                     </li>
                     <li class="flex items-start space-x-3">
-                        <span class="bg-indigo-600 p-1 rounded-full text-[8px] mt-1">✓</span>
+                        <span class="bg-indigo-600 p-1 rounded-full text-[8px] mt-1 shrink-0">✓</span>
                         <span><b>Partners:</b> Institutions aiming to establish IP-driven incubation nodes.</span>
                     </li>
                 </ul>
             </div>
 
-            <div class="lg:w-7/12 p-10 md:p-16">
+            <div class="lg:w-7/12 p-8 md:p-16">
                 <form action="https://formspree.io/f/xpqardzp" method="POST" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-[10px] font-bold uppercase text-gray-400 mb-2 tracking-widest">Full Name</label>
                             <input type="text" name="name" required placeholder="Name" 
-                                   class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                                   class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition text-sm">
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold uppercase text-gray-400 mb-2 tracking-widest">Email Address</label>
                             <input type="email" name="email" required placeholder="Email" 
-                                   class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition">
+                                   class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition text-sm">
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-[10px] font-bold uppercase text-gray-400 mb-2 tracking-widest">Vertical of Interest</label>
-                            <select name="vertical" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition appearance-none">
+                            <select name="vertical" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition appearance-none text-sm">
                                 <option value="multiphase">Multiphase Flows</option>
                                 <option value="energy">Energy Systems</option>
                                 <option value="augmentation">Human Augmentation</option>
@@ -100,7 +120,7 @@
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold uppercase text-gray-400 mb-2 tracking-widest">Current Role</label>
-                            <select name="role" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition appearance-none">
+                            <select name="role" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition appearance-none text-sm">
                                 <option value="student">Student / Research Fellow</option>
                                 <option value="faculty">Faculty Member</option>
                                 <option value="industry">Industry Professional</option>
@@ -112,14 +132,14 @@
                     <div>
                         <label class="block text-[10px] font-bold uppercase text-gray-400 mb-2 tracking-widest">Why do you want to join?</label>
                         <textarea name="message" rows="4" placeholder="Briefly describe your research background or interest..." 
-                                  class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition"></textarea>
+                                  class="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition text-sm"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-4 rounded-xl shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:-translate-y-1">
+                    <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-4 rounded-xl shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:-translate-y-1 text-sm md:text-base">
                         Register for PrajñāLabs Connect
                     </button>
                     
-                    <p class="text-[10px] text-gray-400 text-center mt-4">
+                    <p class="text-[9px] md:text-[10px] text-gray-400 text-center mt-4">
                         By registering, you agree to receive updates about collaboration opportunities from Prajñāpramāṇa IP Studios LLP.
                     </p>
                 </form>
@@ -130,6 +150,16 @@
     <footer class="text-center py-12 text-gray-400 text-[10px] tracking-widest uppercase">
         © 2025 Prajñāpramāṇa IP Studios LLP • Bengaluru, Karnataka
     </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
 
 </body>
 </html>
