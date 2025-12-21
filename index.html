@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch Deck | Prajñāpramāṇa IP Studios LLP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .section-card {
+            @apply bg-white rounded-2xl shadow-lg p-8 md:p-10 mb-8;
+        }
+        .section-title {
+            @apply text-2xl md:text-3xl font-bold mb-6 text-gray-800;
+        }
+        .list-item::before {
+            content: '✓';
+            color: #4f46e5;
+            font-weight: bold;
+            display: inline-block;
+            width: 1.2em;
+            margin-left: -1.2em;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <!-- Header / Title Slide -->
+        <header class="text-center my-12 md:my-20">
+            <div class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#38bdf8;" />
+                            <stop offset="50%" style="stop-color:#818cf8;" />
+                            <stop offset="100%" style="stop-color:#4f46e5;" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M 20,85 V 15 H 45 C 65,15 75,25 75,45 S 65,75 45,75 H 35" fill="url(#logoGradient)" fill-opacity="0.4"/>
+                    <path d="M 27,78 V 22 H 45 C 61,22 68,30 68,45 S 61,68 45,68 H 37" fill="url(#logoGradient)" fill-opacity="0.6"/>
+                    <path d="M 34,71 V 29 H 45 C 57,29 61,35 61,45 S 57,61 45,61 H 41" fill="url(#logoGradient)" fill-opacity="1"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900">Prajñāpramāṇa IP Studios LLP</h1>
+            <p class="text-xl md:text-2xl text-indigo-600 mt-3 font-semibold">From Insight to Evidence.</p>
+            <p class="text-md md:text-lg text-gray-500 mt-6">Kishor Kumar Sarva, PhD</p>
+            <p class="text-sm text-gray-400">October 7, 2025</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- The Problem -->
+            <section class="section-card">
+                <h2 class="section-title">Our Thesis: <span class="gradient-text">We've Cracked the Code of Breakthrough Innovation.</span></h2>
+                <ul class="space-y-3 text-lg text-gray-700">
+                    <li class="list-item">Prajñāpramāṇa acts as a crucial innovation partner for both newcomers and established companies, providing a specialized framework to bridge the gap from initial insight to validated proof.</li>
+                    <li class="list-item"><b class="text-gray-900">High failure rate:</b> Most ambitious projects fail — not from lack of ideas, but from lack of proof (‘pramāṇa’) before big investment.</li>
+                    <li class="list-item"><b class="text-gray-900">Beyond Incrementalism:</b> Incrementalism works for optimization—but it leaves little room for bold, breakthrough innovation.</li>
+                    <li class="list-item"><b class="text-gray-900">The gap:</b> A chasm exists between a brilliant idea and a validated, patent-protected asset ready for investment.</li>
+                </ul>
+            </section>
+
+            <!-- Our Solution -->
+            <section class="section-card text-center bg-indigo-700 text-white">
+                 <h2 class="text-2xl md:text-3xl font-bold mb-4">Our Solution: A Dual Innovation Engine</h2>
+                 <div class="grid md:grid-cols-2 gap-8 text-left mt-6">
+                    <div class="bg-indigo-600 p-6 rounded-lg">
+                        <h3 class="font-bold text-xl text-indigo-200 mb-2">Client-Centric R&D</h3>
+                        <p>We partner with you to define your core technical challenge, perform deep-tech R&D, and develop a robust, patentable solution—transforming an idea into a valuable IP asset.</p>
+                    </div>
+                    <div class="bg-indigo-600 p-6 rounded-lg">
+                        <h3 class="font-bold text-xl text-indigo-200 mb-2">Internal IP Development</h3>
+                        <p>Alongside client work, we conduct our own foundational R&D to build a portfolio of high-value, defensible patents, creating new opportunities for licensing and ventures.</p>
+                    </div>
+                 </div>
+                 <p class="text-lg md:text-xl font-semibold italic bg-white text-indigo-700 rounded-lg px-4 py-2 inline-block mt-8">We deliver tangible, verifiable proof, not just reports.</p>
+            </section>
+
+            <!-- Unique Approach -->
+            <section class="section-card">
+                <h2 class="section-title">Our Unique Approach: <span class="italic">Prajñā → Pramāṇa</span></h2>
+                <p class="text-xl text-gray-700 mb-6 font-semibold">From Core Problem to Verifiable Proof.</p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-sky-400 pl-4">
+                        <h3 class="text-xl font-bold text-sky-600">Phase 1: Prajñā (Insight)</h3>
+                        <p class="text-gray-600 mt-1">Starting with a core problem—from a client or our internal research—we perform deep scientific analysis and IP landscaping to chart a clear path to a novel solution.</p>
+                    </div>
+                    <div class="border-l-4 border-indigo-600 pl-4">
+                        <h3 class="text-xl font-bold text-indigo-800">Phase 2: Pramāṇa (Proof)</h3>
+                        <p class="text-gray-600 mt-1">We build the proof: a working prototype plus a foundational patent portfolio that secures the innovation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What We Deliver -->
+            <section class="section-card">
+                <h2 class="section-title">What We Deliver: <span class="gradient-text">The Validation Package</span></h2>
+                <p class="text-lg text-gray-600 mb-6">We deliver a tangible, de-risked IP asset. The package is tailored based on the R&D stream:</p>
+                 <div class="grid md:grid-cols-2 gap-8 mt-6">
+                    <div class="border-t-4 border-indigo-500 pt-4">
+                        <h3 class="font-semibold text-xl text-gray-800">For Client-Centric Projects</h3>
+                        <p class="text-gray-600 mt-2">We partner with you to transform a challenge into a valuable IP asset. Our deliverables often include:</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
+                            <li><b>Problem Definition & Scoping</b> (clarifying the core technical challenge)</li>
+                            <li><b>Functional Prototype</b> (proving the technical solution)</li>
+                            <li><b>Foundational Patents</b> (securing the legal ownership)</li>
+                        </ul>
+                    </div>
+                    <div class="border-t-4 border-sky-500 pt-4">
+                        <h3 class="font-semibold text-xl text-gray-800">For Internal R&D</h3>
+                        <p class="text-gray-600 mt-2">For our own innovations, we build the complete business case, which includes:</p>
+                         <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
+                            <li>Functional Prototype</li>
+                            <li>Foundational Patents</li>
+                            <li><b>Viability Data</b> (to prove market fit & commercial potential)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Business Model & Why Now? -->
+            <div class="grid md:grid-cols-2 gap-8">
+                 <!-- Business Model -->
+                <section class="section-card">
+                    <h2 class="section-title">Business Model</h2>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="list-item"><b class="text-gray-900">Client R&D Projects:</b> Project-based fees per Validation Package.</li>
+                        <li class="list-item"><b class="text-gray-900">Target Clients:</b> High-growth startups and R&D divisions of corporations in deep-tech, manufacturing, and medical devices.</li>
+                        <li class="list-item"><b class="text-gray-900">Long-term Value:</b> Licensing royalties and strategic partnerships leveraging both our internal and client-developed IP portfolios.</li>
+                    </ul>
+                </section>
+                 <!-- Why Now? -->
+                <section class="section-card">
+                    <h2 class="section-title">Why Now?</h2>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="list-item">Accelerating disruption requires faster, lower-risk paths to proof.</li>
+                        <li class="list-item"><b class="text-gray-900">IP is king:</b> Defensible IP is a durable competitive advantage.</li>
+                        <li class="list-item">Corporations increasingly rely on specialized external labs.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Team -->
+            <section class="section-card">
+                <h2 class="section-title">The Team</h2>
+                <h3 class="text-xl font-bold text-gray-900">Kishor Kumar Sarva, PhD, Founder</h3>
+                <ul class="space-y-2 text-gray-700 mt-4 list-disc list-inside">
+                     <li><b>Postdoctoral Fellow, IISc:</b> Working on deep-tech R&D projects (e.g., UAV powertrains) from concept to patent-ready stages.</li>
+                     <li><b>PhD, IISc:</b> Thesis in Energy & Multiphase Flows, focused on the dripping dynamics of suspensions.</li>
+                     <li><b>M.S. (by research), IIT Madras:</b> Thesis focused on experimental fluid dynamics and turbomachinery.</li>
+                     <li><b>Patent Agent in training:</b> Integrates technology with commercial IP strategy.</li>
+                     <li><b>Innovator:</b> Translates complex research into tangible assets.</li>
+                </ul>
+            </section>
+            
+            <!-- Roadmap -->
+            <section class="section-card">
+                <h2 class="section-title">Roadmap: <span class="gradient-text">Disciplined, Phased Growth</span></h2>
+                <div class="relative border-l-2 border-indigo-200 ml-4">
+                    <div class="mb-8 ml-8">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-green-200 rounded-full -left-4 ring-4 ring-white">
+                            <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <h3 class="font-semibold text-lg text-green-700">Phase 1 (Complete)</h3>
+                        <p class="text-gray-600">LLP established; initial patent portfolio (2 patents filed).</p>
+                    </div>
+                    <div class="mb-8 ml-8">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-200 rounded-full -left-4 ring-4 ring-white">
+                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"></path></svg>
+                        </span>
+                        <h3 class="font-semibold text-lg text-blue-700">Phase 2 (Current)</h3>
+                        <p class="text-gray-600">Secure IISc incubation; convert to Private Limited.</p>
+                    </div>
+                     <div class="ml-8">
+                        <span class="absolute flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full -left-4 ring-4 ring-white">
+                           <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <h3 class="font-semibold text-lg text-gray-800">Phase 3 (Next)</h3>
+                        <p class="text-gray-600">Raise seed; build dedicated lab; expand team; secure first corporate partner.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- IP Framework -->
+            <section class="section-card">
+                <h2 class="section-title">IP Framework (India)</h2>
+                <p class="text-lg text-gray-700 mb-4">We ensure patents are <b class="text-gray-900">novel, inventive, and industrially applicable</b> under the Indian regime:</p>
+                <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                     <li><b>Patents Act, 1970</b> (as amended).</li>
+                     <li><b>Patents Rules, 2003</b> (as amended).</li>
+                     <li><b>Manual of Patent Office Practice and Procedure</b> (CGPDTM).</li>
+                </ul>
+                <p class="mt-4 text-sm text-gray-500 bg-gray-50 p-3 rounded-lg"><b>Operational Steps:</b> structured prior-art search; drafting (Provisional/Complete specification); filing; Request for Examination (RFE); response to First Examination Report (FER) and subsequent hearings; claims strategy and portfolio building aligned with the Act, Rules, and Manual.</p>
+            </section>
+
+        </main>
+        
+        <!-- Footer / Contact -->
+        <footer class="text-center my-12 md:my-20">
+            <h2 class="text-3xl font-bold text-gray-800">Let's build the future.</h2>
+            <div class="mt-6 p-8 bg-white rounded-2xl shadow-lg inline-block">
+                <p class="text-lg font-bold text-indigo-700">Prajñāpramāṇa IP Studios LLP</p>
+                <p class="text-gray-700 mt-2">Kishor Kumar Sarva, PhD</p>
+                <p class="text-gray-600 mt-4"><b>Email:</b> sarva.kishor@gmail.com</p>
+                <p class="text-gray-600"><b>Phone:</b> +91-76670 78762</p>
+                <p class="text-gray-600"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/kishor-kumar-sarva-phd-4ba39417a/" class="text-blue-600 hover:underline">linkedin.com/in/kishor-kumar-sarva</a></p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
