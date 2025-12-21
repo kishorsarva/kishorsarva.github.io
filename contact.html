@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Prajñāpramāṇa IP Studios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Montserrat', sans-serif; } </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-lg md:text-xl text-gray-900 tracking-tight">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></span>
+            </div>
+            
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <ul id="menu" class="hidden md:flex space-x-8 font-semibold text-gray-600 text-sm">
+                <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+                <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
+                <li><a href="team.html" class="hover:text-indigo-600 transition">Team</a></li>
+                <li><a href="prajnalabs.html" class="hover:text-indigo-600 transition">PrajñāLabs</a></li>
+                <li><a href="pramana.html" class="hover:text-indigo-600 transition">Pramāṇa</a></li>
+                <li><a href="contact.html" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu" class="hidden bg-white border-b border-gray-100 md:hidden">
+            <ul class="flex flex-col p-6 space-y-4 font-semibold text-gray-600 text-sm text-center">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="prajnalabs.html">PrajñāLabs</a></li>
+                <li><a href="pramana.html">Pramāṇa</a></li>
+                <li><a href="contact.html" class="text-indigo-600">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-24 md:py-32 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-8">
+            See you <span class="text-indigo-600">soon.</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed mb-12 px-4">
+            Prajñāpramāṇa IP Studios LLP is currently finalizing new research assets and industrial partnerships.
+        </p>
+
+        <div class="inline-block p-1 px-4 bg-indigo-50 rounded-full text-indigo-600 font-bold text-[10px] md:text-xs uppercase tracking-widest mb-16">
+            Bengaluru, Karnataka
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+            <a href="index.html" class="text-sm font-bold text-gray-400 hover:text-indigo-600 transition">Back to Home</a>
+            <a href="https://www.linkedin.com/in/kishor-kumar-sarva-phd-4ba39417a/" target="_blank" class="text-sm font-bold text-indigo-600 border-b-2 border-indigo-100 pb-1">LinkedIn Profile</a>
+        </div>
+    </main>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+
+    <footer class="md:fixed bottom-0 w-full py-10 text-center text-[10px] text-gray-300 tracking-widest uppercase bg-white/80">
+        © 2025 Prajñāpramāṇa IP Studios LLP
+    </footer>
+
+</body>
+</html>
