@@ -3,109 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Openings | PrajñāLabs Connect</title>
+    <title>Openings | Prajñāpramāṇa IP Studios</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style> body { font-family: 'Montserrat', sans-serif; } </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(to right, #4f46e5, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        /* Tab-like structure for the toolbox */
+        .tab-box {
+            display: flex;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #4f46e5;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #334155;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            transition: all 0.2s ease;
+        }
+        .tab-box:hover {
+            background: white;
+            border-color: #4f46e5;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        .tab-box-sky {
+            border-left-color: #0ea5e9;
+        }
+        .tab-box-sky:hover {
+            border-color: #0ea5e9;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="font-bold text-lg md:text-xl text-gray-900 tracking-tight">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></span>
-            <ul class="hidden md:flex space-x-8 font-semibold text-gray-600 text-sm">
-                <li><a href="index.html" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">Home</a></li>
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-lg md:text-xl text-gray-900 tracking-tight">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></span>
+            </div>
+            
+            <ul id="menu" class="hidden md:flex space-x-8 font-semibold text-gray-600 text-sm">
+                <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
                 <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
                 <li><a href="team.html" class="hover:text-indigo-600 transition">Team</a></li>
                 <li><a href="prajnalabs.html" class="hover:text-indigo-600 transition">PrajñāLabs</a></li>
                 <li><a href="pramana.html" class="hover:text-indigo-600 transition">Pramāṇa</a></li>
-                <li><a href="openings.html" class="hover:text-indigo-600 transition">Openings</a></li> <!-- New Link -->
+                <li><a href="openings.html" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">Openings</a></li>
                 <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container mx-auto p-6 md:p-12 max-w-4xl">
-        <header class="text-center mb-16">
-            <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900">Current <span class="text-indigo-600">Openings</span></h1>
-            <p class="text-gray-500 mt-4 text-sm md:text-base italic">"Bridging Fundamental Engineering with Industrial Validation"</p>
-        </header>
+    <header class="py-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Current <span class="gradient-text">Openings</span></h1>
+        <p class="text-gray-500 mt-4 text-sm md:text-base italic">"Where Fundamental Engineering meets Industrial Validation"</p>
+    </header>
 
-        <div class="space-y-8">
-            
-            <div class="bg-white p-8 rounded-[2rem] shadow-lg border-l-8 border-indigo-600 transition-all hover:shadow-xl">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-                    <h3 class="text-xl font-bold text-gray-900">Research Intern (Fluid & Thermal)</h3>
-                    <span class="bg-indigo-50 text-indigo-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase mt-2 md:mt-0">Ref: PL-FT01</span>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Key Competencies</h4>
-                        <ul class="text-xs text-gray-600 space-y-2">
-                            <li>• Dimensionless Analysis (Re, We, Pr)</li>
-                            <li>• Phase-change / Multiphase Basics</li>
-                            <li>• Convective Heat Transfer</li>
-                            <li>• Internal Flow Geometries</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Toolbox</h4>
-                        <ul class="text-xs text-gray-600 space-y-2">
-                            <li>• Parametric CAD (SolidWorks/Fusion 360)</li>
-                            <li>• Numerical Data Correlation</li>
-                            <li>• Rapid Prototyping (FDM/SLA)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-8 pt-6 border-t border-gray-100">
-                    <p class="text-[11px] text-gray-500">Eligibility: BTech 2nd/3rd/4th Year (Mech/Aero/Chem)</p>
-                </div>
+    <main class="container mx-auto px-6 py-8 max-w-4xl">
+
+        <!-- TECHNOLOGISTS SECTION -->
+        <section class="mb-24 text-center">
+            <h2 class="text-2xl font-bold uppercase tracking-widest text-gray-400">Technologists</h2>
+            <div class="mt-6">
+                <p class="text-indigo-600 font-extrabold text-xl tracking-[0.2em] animate-pulse">COMING SOON...</p>
+                <div class="h-1 w-20 bg-gray-200 mx-auto mt-4 rounded-full"></div>
+            </div>
+        </section>
+
+        <!-- INTERNSHIPS SECTION -->
+        <section class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold uppercase tracking-widest text-gray-900">Internships</h2>
             </div>
 
-            <div class="bg-white p-8 rounded-[2rem] shadow-lg border-l-8 border-sky-500 transition-all hover:shadow-xl">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-                    <h3 class="text-xl font-bold text-gray-900">Research Intern (Kinematics & Mechatronics)</h3>
-                    <span class="bg-sky-50 text-sky-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase mt-2 md:mt-0">Ref: PL-KM02</span>
-                </div>
+            <div class="space-y-12">
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Key Competencies</h4>
-                        <ul class="text-xs text-gray-600 space-y-2">
-                            <li>• Multi-linkage Kinematic Analysis</li>
-                            <li>• Dynamic Force & Torque Balance</li>
-                            <li>• Material Strength-to-Weight Optimization</li>
-                            <li>• Degrees of Freedom (DoF) Mapping</li>
-                        </ul>
+                <!-- Role 1: Thermal Fluid Modelling -->
+                <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border-t-8 border-indigo-600 relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-10">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-black text-gray-900 leading-tight">Research Intern: Thermal-Fluid Modelling</h3>
+                            <div class="mt-2 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                                <span class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Ref: PL-FT01</span>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Toolbox</h4>
-                        <ul class="text-xs text-gray-600 space-y-2">
-                            <li>• Assembly Modeling & Motion Study</li>
-                            <li>• Actuation & Sensing Basics</li>
-                            <li>• Finite Element Analysis (Basics)</li>
-                        </ul>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Keywords -->
+                        <div>
+                            <h4 class="text-[11px] font-extrabold text-indigo-900 uppercase tracking-widest mb-6 border-b border-indigo-50 pb-2">Core Focus Areas</h4>
+                            <div class="space-y-4 font-bold text-gray-800">
+                                <p class="flex items-center gap-3"><span class="text-indigo-600 text-lg">01.</span> Modelling</p>
+                                <p class="flex items-center gap-3"><span class="text-indigo-600 text-lg">02.</span> Fluid Mechanics</p>
+                                <p class="flex items-center gap-3"><span class="text-indigo-600 text-lg">03.</span> Heat Transfer</p>
+                            </div>
+                        </div>
+
+                        <!-- Toolbox Tab Structure -->
+                        <div>
+                            <h4 class="text-[11px] font-extrabold text-indigo-900 uppercase tracking-widest mb-6 border-b border-indigo-50 pb-2">Technical Toolbox</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div class="tab-box">SolidWorks</div>
+                                <div class="tab-box">Fusion 360</div>
+                                <div class="tab-box">Python</div>
+                                <div class="tab-box">MATLAB</div>
+                                <div class="tab-box">CFD Basics</div>
+                                <div class="tab-box">Data Correlation</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-left">
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter mb-1">Eligibility Criteria</p>
+                            <p class="text-xs font-bold text-gray-700">2nd, 3rd, Final Year BTech or MTech (Mech/Aero/Chem)</p>
+                        </div>
+                        <a href="contact.html" class="w-full md:w-auto text-center bg-indigo-600 text-white px-10 py-4 rounded-xl text-xs font-black hover:bg-indigo-700 transition-all uppercase tracking-widest shadow-lg shadow-indigo-100">
+                            Apply Now
+                        </a>
                     </div>
                 </div>
-                <div class="mt-8 pt-6 border-t border-gray-100">
-                    <p class="text-[11px] text-gray-500">Eligibility: BTech 2nd/3rd/4th Year (Mech/Mechatronics/ECE)</p>
+
+                <!-- Role 2: Kinematics/Exoskeleton -->
+                <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border-t-8 border-sky-500 relative overflow-hidden">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-10">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-black text-gray-900 leading-tight">Research Intern: Kinematics (Exoskeleton)</h3>
+                            <div class="mt-2 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+                                <span class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Ref: PL-KM02</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Keywords -->
+                        <div>
+                            <h4 class="text-[11px] font-extrabold text-sky-900 uppercase tracking-widest mb-6 border-b border-sky-50 pb-2">Core Focus Areas</h4>
+                            <div class="space-y-4 font-bold text-gray-800">
+                                <p class="flex items-center gap-3"><span class="text-sky-500 text-lg">01.</span> Kinematics</p>
+                                <p class="flex items-center gap-3"><span class="text-sky-500 text-lg">02.</span> Force-Balance</p>
+                                <p class="flex items-center gap-3"><span class="text-sky-500 text-lg">03.</span> Material Optimization</p>
+                            </div>
+                        </div>
+
+                        <!-- Toolbox Tab Structure -->
+                        <div>
+                            <h4 class="text-[11px] font-extrabold text-sky-900 uppercase tracking-widest mb-6 border-b border-sky-50 pb-2">Technical Toolbox</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div class="tab-box tab-box-sky">Assembly Modeling</div>
+                                <div class="tab-box tab-box-sky">Static Analysis</div>
+                                <div class="tab-box tab-box-sky">Actuation Logic</div>
+                                <div class="tab-box tab-box-sky">Sensing Basics</div>
+                                <div class="tab-box tab-box-sky">FEA Basics</div>
+                                <div class="tab-box tab-box-sky">Python / C++</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-left">
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter mb-1">Eligibility Criteria</p>
+                            <p class="text-xs font-bold text-gray-700">2nd, 3rd, Final Year BTech or MTech (Mech/Mechatronics/ECE)</p>
+                        </div>
+                        <a href="contact.html" class="w-full md:w-auto text-center bg-sky-600 text-white px-10 py-4 rounded-xl text-xs font-black hover:bg-sky-700 transition-all uppercase tracking-widest shadow-lg shadow-sky-100">
+                            Apply Now
+                        </a>
+                    </div>
                 </div>
+
             </div>
+        </section>
 
-        </div>
-
-        <div class="mt-16 text-center">
-            <p class="text-gray-400 text-sm mb-6">Interested candidates should register via the main portal.</p>
-            <a href="prajnalabs.html" class="inline-block bg-indigo-600 text-white font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-indigo-700 transition">
-                Return to Registration
-            </a>
-        </div>
     </main>
 
-    <footer class="text-center py-12 text-gray-400 text-[10px] tracking-widest uppercase">
-        © 2025 Prajñāpramāṇa IP Studios LLP
+    <footer class="py-12 text-center text-[10px] text-gray-400 tracking-widest uppercase bg-white border-t border-gray-100">
+        © 2025 Prajñāpramāṇa IP Studios LLP | Bengaluru, India
     </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
 
 </body>
 </html>
