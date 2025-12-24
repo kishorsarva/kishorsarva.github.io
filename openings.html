@@ -9,51 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; }
         .gradient-text {
             background: linear-gradient(to right, #4f46e5, #0ea5e9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        /* Tab-like structure for the toolbox */
-        .tab-box {
-            display: flex;
-            align-items: center;
+        /* Boxed tab style for toolbox */
+        .tool-tab {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-left: 4px solid #4f46e5;
             padding: 8px 12px;
-            border-radius: 6px;
+            border-radius: 4px;
             font-size: 10px;
             font-weight: 700;
-            color: #334155;
+            color: #475569;
             text-transform: uppercase;
-            letter-spacing: 0.025em;
-            transition: all 0.2s ease;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            width: 100%;
         }
-        .tab-box:hover {
-            background: white;
-            border-color: #4f46e5;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-        .tab-box-sky {
-            border-left-color: #0ea5e9;
-        }
-        .tab-box-sky:hover {
-            border-color: #0ea5e9;
-        }
+        .tool-tab-sky { border-left-color: #0ea5e9; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Navigation -->
-    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <span class="font-bold text-lg md:text-xl text-gray-900 tracking-tight">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></span>
             </div>
             
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
             <ul id="menu" class="hidden md:flex space-x-8 font-semibold text-gray-600 text-sm">
                 <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
                 <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
@@ -64,133 +58,98 @@
                 <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
             </ul>
         </div>
+        
+        <div id="mobile-menu" class="hidden bg-white border-b border-gray-100 md:hidden">
+            <ul class="flex flex-col p-6 space-y-4 font-semibold text-gray-600 text-sm">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="openings.html" class="text-indigo-600">Openings</a></li>
+                <li><a href="prajnalabs.html">PrajñāLabs</a></li>
+                <li><a href="pramana.html">Pramāṇa</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header class="py-16 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Current <span class="gradient-text">Openings</span></h1>
-        <p class="text-gray-500 mt-4 text-sm md:text-base italic">"Where Fundamental Engineering meets Industrial Validation"</p>
-    </header>
-
-    <main class="container mx-auto px-6 py-8 max-w-4xl">
-
-        <!-- TECHNOLOGISTS SECTION -->
-        <section class="mb-24 text-center">
-            <h2 class="text-2xl font-bold uppercase tracking-widest text-gray-400">Technologists</h2>
-            <div class="mt-6">
-                <p class="text-indigo-600 font-extrabold text-xl tracking-[0.2em] animate-pulse">COMING SOON...</p>
-                <div class="h-1 w-20 bg-gray-200 mx-auto mt-4 rounded-full"></div>
-            </div>
+    <main class="container mx-auto px-6 py-12 max-w-4xl">
+        
+        <!-- Technologist Header -->
+        <section class="text-center mb-20">
+            <h2 class="text-xl font-bold uppercase tracking-widest text-gray-400">Technologists</h2>
+            <div class="h-1 w-12 bg-gray-200 mx-auto mt-4 rounded-full"></div>
+            <p class="mt-6 text-indigo-600 font-extrabold tracking-widest animate-pulse">COMING SOON...</p>
         </section>
 
-        <!-- INTERNSHIPS SECTION -->
-        <section class="mb-20">
+        <!-- Internship Section -->
+        <section>
             <div class="text-center mb-12">
-                <h2 class="text-2xl font-bold uppercase tracking-widest text-gray-900">Internships</h2>
+                <h2 class="text-xl font-bold uppercase tracking-widest text-gray-900 underline underline-offset-8 decoration-indigo-600">Research Internships</h2>
             </div>
 
             <div class="space-y-12">
-                
-                <!-- Role 1: Thermal Fluid Modelling -->
-                <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border-t-8 border-indigo-600 relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-10">
+                <!-- Fluid Card -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl border-l-8 border-indigo-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-8">Research Intern (Thermal-Fluid Modelling)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div>
-                            <h3 class="text-xl md:text-2xl font-black text-gray-900 leading-tight">Research Intern: Thermal-Fluid Modelling</h3>
-                            <div class="mt-2 flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
-                                <span class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Ref: PL-FT01</span>
+                            <h4 class="text-[10px] font-bold text-gray-400 uppercase mb-4 tracking-widest">Focus Areas</h4>
+                            <div class="space-y-3 font-bold text-gray-800 text-sm">
+                                <p>1. Modelling</p>
+                                <p>2. Fluid Mechanics</p>
+                                <p>3. Heat Transfer</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-[10px] font-bold text-gray-400 uppercase mb-4 tracking-widest">Toolbox</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="tool-tab">SolidWorks</div>
+                                <div class="tool-tab">Fusion 360</div>
+                                <div class="tool-tab">Python</div>
+                                <div class="tool-tab">MATLAB</div>
+                                <div class="tool-tab">CFD Basics</div>
+                                <div class="tool-tab">Data Correlation</div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <!-- Keywords -->
-                        <div>
-                            <h4 class="text-[11px] font-extrabold text-indigo-900 uppercase tracking-widest mb-6 border-b border-indigo-50 pb-2">Core Focus Areas</h4>
-                            <div class="space-y-4 font-bold text-gray-800">
-                                <p class="flex items-center gap-3"><span class="text-indigo-600 text-lg">01.</span> Modelling</p>
-                                <p class="flex items-center gap-3"><span class="text-indigo-600 text-lg">02.</span> Fluid Mechanics</p>
-                                <p class="flex items-center gap-3"><span class="text-indigo-600 text-lg">03.</span> Heat Transfer</p>
-                            </div>
-                        </div>
-
-                        <!-- Toolbox Tab Structure -->
-                        <div>
-                            <h4 class="text-[11px] font-extrabold text-indigo-900 uppercase tracking-widest mb-6 border-b border-indigo-50 pb-2">Technical Toolbox</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <div class="tab-box">SolidWorks</div>
-                                <div class="tab-box">Fusion 360</div>
-                                <div class="tab-box">Python / MATLAB </div>
-                                <div class="tab-box">CFD Basics</div>
-                                <div class="tab-box">Data Correlation</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div class="text-left">
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter mb-1">Eligibility Criteria</p>
-                            <p class="text-xs font-bold text-gray-700">2nd, 3rd, Final Year BTech or MTech (Mech/Aero/Chem)</p>
-                        </div>
-                        <a href="contact.html" class="w-full md:w-auto text-center bg-indigo-600 text-white px-10 py-4 rounded-xl text-xs font-black hover:bg-indigo-700 transition-all uppercase tracking-widest shadow-lg shadow-indigo-100">
-                            Apply Now
-                        </a>
+                    <div class="mt-10 pt-6 border-t border-gray-100">
+                        <p class="text-[10px] font-bold text-gray-500 uppercase">Eligibility: 2nd, 3rd, Final Year BTech/MTech (Mech/Aero/Chem)</p>
                     </div>
                 </div>
 
-                <!-- Role 2: Kinematics/Exoskeleton -->
-                <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border-t-8 border-sky-500 relative overflow-hidden">
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-10">
+                <!-- Exoskeleton Card -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-xl border-l-8 border-sky-500">
+                    <h3 class="text-xl font-bold text-gray-900 mb-8">Research Intern (Kinematics & Structures)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div>
-                            <h3 class="text-xl md:text-2xl font-black text-gray-900 leading-tight">Research Intern: Kinematics (Exoskeleton)</h3>
-                            <div class="mt-2 flex items-center gap-2">
-                                <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-                                <span class="text-gray-400 text-[10px] font-bold uppercase tracking-widest">Ref: PL-KM02</span>
+                            <h4 class="text-[10px] font-bold text-gray-400 uppercase mb-4 tracking-widest">Focus Areas</h4>
+                            <div class="space-y-3 font-bold text-gray-800 text-sm">
+                                <p>1. Kinematics</p>
+                                <p>2. Force-Balance</p>
+                                <p>3. Material Optimization</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4 tracking-widest">Toolbox</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="tool-tab tool-tab-sky">SolidWorks</div>
+                                <div class="tool-tab tool-tab-sky">Assembly Study</div>
+                                <div class="tool-tab tool-tab-sky">Python</div>
+                                <div class="tool-tab tool-tab-sky">Motion Study</div>
+                                <div class="tool-tab tool-tab-sky">FEA Basics</div>
+                                <div class="tool-tab tool-tab-sky">CAD Modelling</div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <!-- Keywords -->
-                        <div>
-                            <h4 class="text-[11px] font-extrabold text-sky-900 uppercase tracking-widest mb-6 border-b border-sky-50 pb-2">Core Focus Areas</h4>
-                            <div class="space-y-4 font-bold text-gray-800">
-                                <p class="flex items-center gap-3"><span class="text-sky-500 text-lg">01.</span> Kinematics</p>
-                                <p class="flex items-center gap-3"><span class="text-sky-500 text-lg">02.</span> Force-Balance</p>
-                                <p class="flex items-center gap-3"><span class="text-sky-500 text-lg">03.</span> Material Optimization</p>
-                            </div>
-                        </div>
-
-                        <!-- Toolbox Tab Structure -->
-                        <div>
-                            <h4 class="text-[11px] font-extrabold text-sky-900 uppercase tracking-widest mb-6 border-b border-sky-50 pb-2">Technical Toolbox</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <div class="tab-box tab-box-sky">Assembly Modeling</div>
-                                <div class="tab-box tab-box-sky">Static Analysis</div>
-                                <div class="tab-box tab-box-sky">Actuation Logic</div>
-                                <div class="tab-box tab-box-sky">Sensing Basics</div>
-                                <div class="tab-box tab-box-sky">FEA Basics</div>
-                                <div class="tab-box tab-box-sky">Python / C++</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div class="text-left">
-                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter mb-1">Eligibility Criteria</p>
-                            <p class="text-xs font-bold text-gray-700">2nd, 3rd, Final Year BTech or MTech (Mech/Mechatronics/ECE)</p>
-                        </div>
-                        <a href="contact.html" class="w-full md:w-auto text-center bg-sky-600 text-white px-10 py-4 rounded-xl text-xs font-black hover:bg-sky-700 transition-all uppercase tracking-widest shadow-lg shadow-sky-100">
-                            Apply Now
-                        </a>
+                    <div class="mt-10 pt-6 border-t border-gray-100">
+                        <p class="text-[10px] font-bold text-gray-500 uppercase">Eligibility: 2nd, 3rd, Final Year BTech/MTech (Mech/Mechatronics/ECE)</p>
                     </div>
                 </div>
-
             </div>
         </section>
-
     </main>
 
-    <footer class="py-12 text-center text-[10px] text-gray-400 tracking-widest uppercase bg-white border-t border-gray-100">
+    <footer class="py-12 border-t border-gray-100 text-center text-[10px] text-gray-400 uppercase tracking-widest">
         © 2025 Prajñāpramāṇa IP Studios LLP | Bengaluru, India
     </footer>
 
@@ -203,6 +162,5 @@
             });
         }
     </script>
-
 </body>
 </html>
