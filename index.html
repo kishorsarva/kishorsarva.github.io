@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; }
+        body { font-family: 'Montserrat', sans-serif; overflow: hidden; }
         .gradient-text {
             background: linear-gradient(to right, #4f46e5, #0ea5e9);
             -webkit-background-clip: text;
@@ -19,133 +19,107 @@
         .hero-gradient {
             background: radial-gradient(circle at 70% 30%, #fefce8 0%, #ffffff 100%);
         }
+        @media (max-width: 1024px) or (max-height: 800px) {
+            body { overflow-y: auto; }
+        }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
 
-    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <!-- NAVIGATION RIBBON -->
+    <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 flex-shrink-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
             <div class="flex items-center space-x-2">
-                <span class="font-bold text-lg md:text-xl text-gray-900 tracking-tight">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></span>
+                <span class="font-bold text-lg md:text-xl text-gray-900 tracking-tight italic">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></span>
             </div>
             
             <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
 
-            <!-- Desktop Menu -->
-            <ul id="menu" class="hidden md:flex space-x-8 font-semibold text-gray-600 text-sm items-center">
+            <!-- Desktop Menu: Ribbon as the sole source of navigation -->
+            <ul id="menu" class="hidden md:flex space-x-8 font-semibold text-gray-600 text-[11px] items-center uppercase tracking-widest">
                 <li><a href="index.html" class="text-indigo-600 border-b-2 border-indigo-600 pb-1">Home</a></li>
                 <li><a href="services.html" class="hover:text-indigo-600 transition">Services</a></li>
                 <li><a href="team.html" class="hover:text-indigo-600 transition">Team</a></li>
-                <!-- PrajñāLabs Tab highlighted in Indigo -->
-                <li><a href="prajnalabs.html" class="text-indigo-600 font-bold hover:text-indigo-800 transition">PrajñāLabs</a></li>
+                <li><a href="prajnalabs.html" class="hover:text-indigo-600 transition">PrajñāLabs</a></li>
                 <li><a href="pramana.html" class="hover:text-indigo-600 transition">Pramāṇa</a></li>
                 <li><a href="openings.html" class="hover:text-indigo-600 transition">Openings</a></li>
                 <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
             </ul>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden bg-white border-b border-gray-100 md:hidden">
-            <ul class="flex flex-col p-6 space-y-4 font-semibold text-gray-600 text-sm">
-                <li><a href="index.html" class="text-indigo-600">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html">Team</a></li>
-                <!-- PrajñāLabs Tab highlighted in Indigo -->
-                <li><a href="prajnalabs.html" class="text-indigo-600 font-bold">PrajñāLabs</a></li>
-                <li><a href="pramana.html">Pramāṇa</a></li>
-                <li><a href="openings.html">Openings</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <div id="mobile-menu" class="hidden bg-white border-b border-gray-100 px-6 py-4 space-y-3 font-bold text-[10px] uppercase tracking-widest">
+            <a href="index.html" class="block text-indigo-600">Home</a>
+            <a href="services.html" class="block">Services</a>
+            <a href="team.html" class="block">Team</a>
+            <a href="prajnalabs.html" class="block">PrajñāLabs</a>
+            <a href="pramana.html" class="block">Pramāṇa</a>
+            <a href="openings.html" class="block">Openings</a>
+            <a href="contact.html" class="block">Contact</a>
         </div>
     </nav>
 
-    <!-- Compact Hero Section -->
-    <header class="hero-gradient pt-6 md:pt-10 pb-6 md:pb-8">
-        <div class="container mx-auto px-6 text-center">
-            <div class="inline-block px-3 py-1 mb-3 text-[10px] md:text-xs font-bold tracking-widest text-indigo-600 uppercase bg-indigo-50 rounded-full">
-                Deep-Tech IP & R&D Studio
-            </div>
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
-                From <span class="gradient-text">Insight</span> to Evidence.
-            </h1>
-            <p class="text-sm md:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto mb-6">
-                Bridging the gap between scientific breakthroughs and industrial reality. We transform high-value research into validated, patent-protected assets.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-3">
-                <a href="prajnalabs.html" class="bg-indigo-600 text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:bg-indigo-700 transition-all text-center text-xs md:text-sm">
-                    Join PrajñāLabs Connect
-                </a>
-                <a href="pramana.html" class="border border-gray-300 text-gray-600 px-6 py-2.5 rounded-full font-bold hover:bg-gray-50 transition text-center text-xs md:text-sm">
-                    Scientific Evidence (Pramāṇa)
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-6 py-5 md:py-8 max-w-6xl">
-        
-        <!-- Framework Section (Compact) -->
-        <section class="mb-8 md:mb-10">
-            <div class="text-center mb-6">
-                <h2 class="text-lg md:text-xl font-bold text-gray-900 tracking-tight">The Prajñā → Pramāṇa Framework</h2>
-                <div class="h-1 w-12 bg-indigo-600 mx-auto mt-2 rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
-                    <h3 class="text-base md:text-lg font-bold text-sky-500 mb-2">Prajñā (Insight)</h3>
-                    <p class="text-gray-600 leading-relaxed mb-3 text-xs md:text-sm">
-                        Identifying the "White Space" through deep technical analysis and strategic IP landscaping.
-                    </p>
-                    <a href="services.html" class="text-[10px] md:text-xs font-bold text-indigo-600 hover:underline uppercase tracking-wider">Explore Services →</a>
+    <main class="flex-grow flex flex-col justify-center hero-gradient relative">
+        <div class="container mx-auto px-6 max-w-6xl py-4 md:py-8">
+            
+            <!-- HEADER: Direct & Objective -->
+            <div class="text-center mb-6 md:mb-10">
+                <div class="inline-block px-3 py-1 mb-4 text-[9px] font-bold tracking-[0.4em] text-indigo-600 uppercase bg-indigo-50 rounded-md border border-indigo-100">
+                    Deep-Tech IP & R&D Studio
                 </div>
-                <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
-                    <h3 class="text-base md:text-lg font-bold text-indigo-600 mb-2">Pramāṇa (Proof)</h3>
-                    <p class="text-gray-600 leading-relaxed mb-3 text-xs md:text-sm">
-                        Building verifiable proof via industrial prototypes and secured intellectual property portfolios.
-                    </p>
-                    <a href="pramana.html" class="text-[10px] md:text-xs font-bold text-indigo-600 hover:underline uppercase tracking-wider">See Publications & Patents →</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section (Compact) -->
-        <section class="bg-gray-900 text-white rounded-3xl p-8 text-center relative overflow-hidden shadow-xl">
-            <div class="relative z-10">
-                <h2 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-2">PrajñāLabs Connect</h2>
-                <h2 class="text-2xl md:text-3xl font-extrabold mb-4 leading-tight">Ready to Build the Future?</h2>
-                <p class="text-gray-400 text-xs md:text-sm mb-6 max-w-xl mx-auto leading-relaxed">
-                    Join our collaborative network of members. Whether you are an institution, faculty, or student, PrajñāLabs is your gateway to industrial asset creation.
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4 tracking-tight">
+                    From <span class="gradient-text">Insight</span> to Evidence.
+                </h1>
+                <p class="text-sm md:text-base text-gray-500 leading-relaxed max-w-3xl mx-auto mb-8 font-medium">
+                    Bridging scientific breakthroughs and industrial application. We transition high-fidelity research into validated, patent-protected assets.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="prajnalabs.html" class="bg-indigo-600 text-white px-8 py-2.5 rounded-full font-bold hover:bg-indigo-50 hover:text-indigo-900 transition-all shadow-lg text-xs md:text-sm">
-                        Sign Up for PrajñāLabs Connect
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+                    <a href="prajnalabs.html" class="bg-indigo-600 text-white px-10 py-3.5 rounded-full font-bold shadow-lg hover:bg-indigo-700 transition-all text-[11px] uppercase tracking-widest text-center">
+                        Join PrajñāLabs Connect
+                    </a>
+                    <a href="pramana.html" class="bg-white border border-gray-200 text-gray-600 px-10 py-3.5 rounded-full font-bold hover:bg-gray-50 transition-all text-[11px] uppercase tracking-widest text-center">
+                        Scientific Evidence (Pramāṇa)
                     </a>
                 </div>
             </div>
-            <div class="absolute -bottom-20 -right-20 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl"></div>
-        </section>
 
+            <!-- COMPRESSED FRAMEWORK: Purely Technical -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                
+                <!-- Prajñā: The Methods -->
+                <div class="p-8 md:p-10 bg-white/60 backdrop-blur-sm rounded-[1.5rem] border border-gray-100 hover:border-indigo-200 transition-all group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="h-1 w-8 bg-sky-400 rounded-full"></span>
+                        <h3 class="text-[11px] font-bold text-sky-600 uppercase tracking-[0.3em]">Prajñā (Insight)</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 text-[13px]">
+                        Fundamental analysis of <b>Longwall Mining Gas Dynamics</b>, <b>CO₂ Absorption Technology with Salt Solvents</b>, and <b>Studies of Multiphase Flows</b>. Utilizing <b>DNS</b>, <b>PINNs</b>, and <b>Experimental Validation</b> to resolve interfacial physics and species transport.
+                    </p>
+                    <a href="services.html" class="text-[10px] font-bold text-indigo-600 uppercase tracking-widest group-hover:underline">Technical Working Methods →</a>
+                </div>
+
+                <!-- Pramāṇa: The Assets -->
+                <div class="p-8 md:p-10 bg-white/60 backdrop-blur-sm rounded-[1.5rem] border border-gray-100 hover:border-indigo-200 transition-all group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="h-1 w-8 bg-indigo-500 rounded-full"></span>
+                        <h3 class="text-[11px] font-bold text-indigo-600 uppercase tracking-[0.3em]">Pramāṇa (Proof)</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 text-[13px]">
+                        Consolidating findings into industrial assets: <b>Patents</b>, <b>Peer-Reviewed Publications</b>, and <b>Technical Insights</b>. Providing validated datasets and strategic IP landscaping for industrial deployment.
+                    </p>
+                    <a href="pramana.html" class="text-[10px] font-bold text-indigo-600 uppercase tracking-widest group-hover:underline">Inventory & Publications →</a>
+                </div>
+
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-white py-6 border-t border-gray-100 mt-6">
-        <div class="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-            <div>
-                <p class="font-bold text-gray-900">Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span></p>
-                <p class="mt-1 tracking-widest uppercase text-[10px]"> India</p>
-            </div>
-            <div class="flex flex-wrap justify-center gap-4 font-semibold">
-                <a href="services.html" class="hover:text-indigo-600">Services</a>
-                <a href="team.html" class="hover:text-indigo-600">Team</a>
-                <a href="openings.html" class="hover:text-indigo-600">Openings</a>
-                <a href="prajnalabs.html" class="hover:text-indigo-600">PrajñāLabs</a>
-                <a href="pramana.html" class="hover:text-indigo-600">Pramāṇa</a>
-                <a href="contact.html" class="hover:text-indigo-600 transition">Contact</a>
-            </div>
-            <p class="text-[10px] text-center">© 2025 Prajñāpramāṇa IP Studios LLP</p>
+    <!-- MINIMAL FOOTER -->
+    <footer class="bg-white py-6 border-t border-gray-100 flex-shrink-0">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-[9px] text-gray-400 font-bold uppercase tracking-widest">
+            <p>Prajñāpramāṇa <span class="text-indigo-600">IP Studios</span> • India</p>
+            <p class="my-2 md:my-0">Scientific Rigor • Industrial Evidence</p>
+            <p>© 2025 IP Studios LLP</p>
         </div>
     </footer>
 
