@@ -11,7 +11,8 @@
     <style>
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(to right, #4338ca, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .feature-box { border-left: 4px solid #4338ca; padding-left: 1.5rem; }
+        .feature-box { border-left: 4px solid #4338ca; padding-left: 1rem; }
+        @media (min-width: 768px) { .feature-box { padding-left: 1.5rem; } }
         .pinn-badge { background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%); }
         .schematic-bg { background-image: radial-gradient(#e2e8f0 1px, transparent 1px); background-size: 20px 20px; }
     </style>
@@ -20,52 +21,52 @@
 
     <!-- Navigation -->
     <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-        <div class="container mx-auto px-6 py-2 flex justify-between items-center max-w-7xl">
-            <span class="font-bold text-lg text-slate-900">PrajñāLabs <span class="text-indigo-600">NGMG</span></span>
-            <div class="flex items-center space-x-6">
+        <div class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center max-w-7xl">
+            <span class="font-bold text-base md:text-lg text-slate-900">PrajñāLabs <span class="text-indigo-600">NGMG</span></span>
+            <div class="flex items-center space-x-4 md:space-x-6">
                 <a href="prajnalabs.html" class="text-[10px] font-bold uppercase text-slate-400 hover:text-indigo-600 transition tracking-widest">← Hub</a>
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow container mx-auto px-6 py-12 md:py-16 max-w-6xl">
+    <main class="flex-grow container mx-auto px-4 md:px-6 py-8 md:py-16 max-w-6xl">
         
         <!-- Header Section -->
-        <header class="mb-16 md:mb-20">
-            <span class="text-[10px] font-bold text-indigo-600 uppercase tracking-[0.3em] bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Navier Gas Flow Modelling Group</span>
-            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-6 leading-tight">
+        <header class="mb-12 md:mb-20 text-left">
+            <span class="text-[9px] md:text-[10px] font-bold text-indigo-600 uppercase tracking-[0.2em] md:tracking-[0.3em] bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100 inline-block">Navier Gas Flow Modelling Group</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 md:mt-6 leading-tight">
                 Longwall Gas Dynamics <br><span class="gradient-text">NavierGoaf-V Portal.</span>
             </h1>
-            <p class="text-base text-slate-600 mt-6 max-w-3xl leading-relaxed">
+            <p class="text-sm md:text-base text-slate-600 mt-4 md:mt-6 max-w-3xl leading-relaxed">
                 A technical portal delivering high-fidelity species transport modeling for longwall operations. We bridge the gap between complex porous-media physics and site-level decision support through disciplined automation and cloud-native delivery.
             </p>
         </header>
 
         <!-- Tool Focus Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mb-16 md:mb-20">
             
             <!-- Left: Technical Descriptions -->
-            <div class="lg:col-span-7 space-y-12">
+            <div class="lg:col-span-7 space-y-10 md:space-y-12">
                 <div class="feature-box">
-                    <h3 class="text-xl font-extrabold text-slate-900 mb-4">NavierGoaf-V Decision Support</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">
+                    <h3 class="text-lg md:text-xl font-extrabold text-slate-900 mb-3 md:mb-4">NavierGoaf-V Decision Support</h3>
+                    <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
                         A specialized tool for analyzing gas distribution in longwall goaf. By linking real mine layouts with steady-state physics models, users can visualize methane migration, oxygen ingress, and inertisation scenarios with industrial-grade repeatability.
                     </p>
                 </div>
 
                 <div class="feature-box">
-                    <h3 class="text-xl font-extrabold text-slate-900 mb-4">Physics-Grounded Chat Assistant</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">
+                    <h3 class="text-lg md:text-xl font-extrabold text-slate-900 mb-3 md:mb-4">Physics-Grounded Chat Assistant</h3>
+                    <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
                         An integrated assistant capable of summarizing simulation results and explaining complex gas behavior patterns in plain language. It supports safer planning by enabling rapid interpretation of spontaneous combustion risks.
                     </p>
                 </div>
             </div>
 
             <!-- Right: The Portal UI Card -->
-            <div class="lg:col-span-5 schematic-bg p-1 rounded-[3rem] border border-slate-200 shadow-xl bg-white">
-                <div class="p-8 md:p-10 text-center flex flex-col items-center justify-center h-full">
-                    <div class="mb-8">
-                        <svg width="80" height="80" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="lg:col-span-5 schematic-bg p-1 rounded-[2rem] md:rounded-[3rem] border border-slate-200 shadow-xl bg-white">
+                <div class="p-6 md:p-10 text-center flex flex-col items-center justify-center h-full">
+                    <div class="mb-6 md:mb-8">
+                        <svg width="60" height="60" class="md:w-20 md:h-20" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="5" y="45" width="50" height="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
                             <rect x="15" y="35" width="30" height="10" stroke="#4338CA" stroke-width="2"/>
                             <path d="M20 35C20 20 10 15 5 15" stroke="#4338CA" stroke-width="1.2" stroke-dasharray="3 3"/>
@@ -73,12 +74,12 @@
                             <circle cx="30" cy="40" r="1.5" fill="#4338CA"/>
                         </svg>
                     </div>
-                    <h4 class="text-base font-bold text-slate-900 uppercase tracking-widest mb-4">NavierGoaf-V Tool</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed mb-8 max-w-xs mx-auto">
+                    <h4 class="text-sm md:text-base font-bold text-slate-900 uppercase tracking-widest mb-3 md:mb-4">NavierGoaf-V Tool</h4>
+                    <p class="text-[10px] md:text-[11px] text-slate-500 leading-relaxed mb-6 md:mb-8 max-w-xs mx-auto">
                         Cloud-delivered physics portal. Self-guided and intuitive. Just log in to select operating conditions and visualize high-quality technical insights instantly.
                     </p>
-                    <div class="flex flex-col gap-3 w-full max-w-[200px]">
-                        <div class="bg-indigo-600 text-white py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg">Access Portal</div>
+                    <div class="flex flex-col gap-3 w-full max-w-[240px]">
+                        <a href="https://www.naviergoafausmodel.com/dimensions" target="_blank" class="bg-indigo-600 text-white py-4 rounded-xl text-[10px] font-bold uppercase tracking-widest shadow-lg hover:bg-indigo-700 transition-all text-center">Access Portal</a>
                         <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest italic">AWS S3 / RDS Secured</span>
                     </div>
                 </div>
@@ -86,49 +87,49 @@
         </div>
 
         <!-- Roadmap Section -->
-        <section class="bg-slate-900 text-white p-10 md:p-14 rounded-[3rem] shadow-2xl relative overflow-hidden">
+        <section class="bg-slate-900 text-white p-8 md:p-14 rounded-[2rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden">
             <div class="relative z-10">
-                <div class="flex flex-col md:flex-row md:items-center gap-6 mb-10">
-                    <h2 class="text-2xl font-bold uppercase tracking-widest text-indigo-300">Technical Roadmap</h2>
-                    <span class="pinn-badge inline-block px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest border border-white/20">PINN Integration</span>
+                <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 mb-8 md:mb-10">
+                    <h2 class="text-xl md:text-2xl font-bold uppercase tracking-widest text-indigo-300">Technical Roadmap</h2>
+                    <span class="pinn-badge inline-block px-3 py-1 rounded-full text-[8px] md:text-[9px] font-bold uppercase tracking-widest border border-white/20 self-start md:self-center">PINN Integration</span>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                     <div>
-                        <p class="text-[10px] font-bold text-indigo-400 uppercase tracking-widest mb-4">Phase 01: Steady-State Support (Current)</p>
-                        <p class="text-sm text-slate-300 leading-relaxed">
+                        <p class="text-[9px] md:text-[10px] font-bold text-indigo-400 uppercase tracking-widest mb-3 md:mb-4">Phase 01: Steady-State Support (Current)</p>
+                        <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
                             Our current architecture utilizes a curated library of industry-accepted physics models to provide rapid, scenario-based insights. This ensures engineering integrity is preserved through repeatability and high-quality visualizations.
                         </p>
                     </div>
                     <div>
-                        <p class="text-[10px] font-bold text-indigo-400 uppercase tracking-widest mb-4">Phase 02: PINN Predictive Analysis (Future)</p>
-                        <p class="text-sm text-slate-300 leading-relaxed">
+                        <p class="text-[9px] md:text-[10px] font-bold text-indigo-400 uppercase tracking-widest mb-3 md:mb-4">Phase 02: PINN Predictive Analysis (Future)</p>
+                        <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
                             Integration of <b>Physics-Informed Neural Networks (PINNs)</b> to enable real-time, predictive gas distribution modeling. PINNs will accelerate high-fidelity interpolation, allowing for dynamic scenario analysis without the computational overhead of full CFD.
                         </p>
                     </div>
                 </div>
 
-                <div class="mt-12 pt-10 border-t border-white/10 flex flex-wrap gap-8 justify-between items-center">
+                <div class="mt-8 md:mt-12 pt-8 md:pt-10 border-t border-white/10 flex flex-col sm:flex-row sm:flex-wrap gap-6 sm:gap-8 justify-between items-start sm:items-center">
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">✓</div>
-                        <p class="text-[10px] uppercase font-bold tracking-widest">Situational Awareness</p>
+                        <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-sm md:text-base">✓</div>
+                        <p class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest">Situational Awareness</p>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">✓</div>
-                        <p class="text-[10px] uppercase font-bold tracking-widest">Reduced Uncertainty</p>
+                        <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-sm md:text-base">✓</div>
+                        <p class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest">Reduced Uncertainty</p>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">✓</div>
-                        <p class="text-[10px] uppercase font-bold tracking-widest">Disciplined Automation</p>
+                        <div class="w-6 h-6 md:w-8 md:h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400 text-sm md:text-base">✓</div>
+                        <p class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest">Disciplined Automation</p>
                     </div>
                 </div>
             </div>
             <!-- Background Decoration -->
-            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px]"></div>
+            <div class="absolute -bottom-24 -right-24 w-64 h-64 md:w-96 md:h-96 bg-indigo-600/10 rounded-full blur-[60px] md:blur-[100px]"></div>
         </section>
     </main>
 
-    <footer class="bg-white py-12 border-t border-slate-100 text-center">
+    <footer class="bg-white py-10 md:py-12 border-t border-slate-100 text-center">
         <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest italic">Navier Gas Flow Modelling Group • PrajñāLabs Ecosystem</p>
     </footer>
 
