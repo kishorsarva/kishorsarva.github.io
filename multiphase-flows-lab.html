@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiphase Flows | Innovation Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            /* Royal Blue Gradient for Fluidics */
+            background: linear-gradient(to right, #1d4ed8, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+        }
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        
+        /* Tab Content Animation */
+        .content-wrapper { 
+            display: none; 
+            flex-direction: column;
+            height: 100%;
+            animation: fadeIn 0.4s ease-out; 
+        }
+        .content-wrapper.active { display: flex; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .video-placeholder {
+            aspect-ratio: 16/9;
+            background: #0f172a;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #1e293b;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+            width: 100%;
+        }
+
+        .academic-section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .academic-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #2563eb; /* Blue 600 */
+        }
+        
+        /* Grid Card Styling */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .card-header-fixed {
+            min-height: 140px; 
+            display: flex;
+            flex-direction: column;
+        }
+        .description-box {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 flex-shrink-0">
+        <div class="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center max-w-[1440px]">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-lg md:text-xl text-gray-900 tracking-tight">Prajñāpramāṇa <span class="text-blue-600">IP Studios</span></span>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-8 font-semibold text-gray-600 text-[13px] items-center">
+                <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="services.html" class="hover:text-blue-600 transition">Services</a></li>
+                <li><a href="team.html" class="hover:text-blue-600 transition">Team</a></li>
+                <li><a href="prajnalabs.html" class="text-blue-600 border-b-2 border-blue-600 pb-1 font-bold">PrajñāLabs</a></li>
+                <li><a href="pramana.html" class="hover:text-blue-600 transition">Pramāṇa</a></li>
+                <li><a href="openings.html" class="hover:text-blue-600 transition">Openings</a></li>
+                <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow container mx-auto px-4 md:px-8 py-12 max-w-[1440px]">
+        
+        <!-- Header: Simplified & Technical (Swapped Layout) -->
+        <!-- Added lg:flex-row-reverse to move Title to Right and Card to Left on desktop -->
+        <header class="mb-20 flex flex-col lg:flex-row-reverse gap-12 items-center">
+           
+            <!-- Invention Factory: Technology Frontiers (Left Side on Desktop) -->
+            <div class="w-full lg:w-1/2">
+                <div class="bg-slate-50 p-8 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                    <h4 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-8">Invention Factory: Technology Frontiers</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-[13px] font-medium text-gray-700">
+                        
+                        <!-- Domain 1 -->
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2 font-bold text-gray-900">
+                                <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Additive Mfg.
+                            </div>
+                            <p class="text-[11px] text-gray-500 pl-3.5">Direct Ink Writing</p>
+                        </div>
+
+                        <!-- Domain 2 -->
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2 font-bold text-gray-900">
+                                <span class="w-1.5 h-1.5 bg-sky-500 rounded-full"></span> Industrial Coatings
+                            </div>
+                            <p class="text-[11px] text-gray-500 pl-3.5">Smart Textiles, Optical Fiber</p>
+                        </div>
+
+                        <!-- Domain 3 -->
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2 font-bold text-gray-900">
+                                <span class="w-1.5 h-1.5 bg-cyan-500 rounded-full"></span> Precision Spray
+                            </div>
+                            <p class="text-[11px] text-gray-500 pl-3.5">Fogponics, Medical Nebulizers</p>
+                        </div>
+
+                        <!-- Domain 4 -->
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2 font-bold text-gray-900">
+                                <span class="w-1.5 h-1.5 bg-violet-500 rounded-full"></span> Material Processing
+                            </div>
+                            <p class="text-[11px] text-gray-500 pl-3.5">Micro-Encapsulation, Prilling</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+             
+            <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                    <span class="gradient-text">Fluidics</span> Innovation Engine.
+                </h1>
+                
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed max-w-4xl mb-12">
+                    Translating fundamental interfacial physics into high-impact <b>academic publications</b> and <b>patentable industrial hardware</b> for Fogponics, Healthcare (Nebulizers), and Direct Ink Writing.
+                </p>
+            </div>
+
+        </header>
+
+        <h2 class="academic-section-title text-sm font-bold text-gray-400 uppercase tracking-widest mb-10">Research Focus: Interfacial & Free-Surface Flows</h2>
+
+        <!-- PROJECT GRID (2x2 Layout) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 mb-24">
+
+            <!-- PROJECT 1: DRIPPING DYNAMICS -->
+            <div class="project-card">
+                <div class="mb-4 card-header-fixed">
+                    <div class="flex flex-wrap items-center gap-y-2 gap-x-3 mb-2 text-[9px] font-bold uppercase tracking-widest border-b border-gray-100 pb-2">
+                        <div class="flex items-center gap-1">
+                            <span class="text-gray-400">Prj ID:</span>
+                            <span class="bg-blue-50 text-blue-700 px-2 py-0.5 rounded border border-blue-100">MPF-DD-001</span>
+                        </div>
+                        <span class="text-gray-300">|</span>
+                        <div class="flex items-center gap-1">
+                            <span class="text-gray-400">Pub Ref:</span>
+                            <span class="text-slate-500">J.Fluid.Mech-2025</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-2xl font-extrabold text-gray-900 leading-tight">Complex Dripping Dynamics</h3>
+                        <span class="text-blue-600 text-2xl">💧</span>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 mt-auto mb-1">
+                        <button onclick="switchDrippingTab('newtonian')" id="tab-btn-newtonian" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-blue-100 bg-blue-600 text-white transition-all">Newtonian</button>
+                        <button onclick="switchDrippingTab('surfactant')" id="tab-btn-surfactant" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-gray-500 hover:bg-slate-50 transition-all">Surfactant</button>
+                        <button onclick="switchDrippingTab('suspension')" id="tab-btn-suspension" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-gray-500 hover:bg-slate-50 transition-all">Suspension</button>
+                        <button onclick="switchDrippingTab('yield')" id="tab-btn-yield" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-gray-500 hover:bg-slate-50 transition-all">Yield</button>
+                    </div>
+                </div>
+
+                <div class="relative flex-grow flex flex-col">
+                    <div id="dripping-newtonian" class="content-wrapper dripping-content active flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0">
+                            <!-- PLACEHOLDER FOR VIDEO -->
+                            <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center p-8 text-center">
+                                <span class="text-blue-500 mb-4 scale-125"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 13.5a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z"/></svg></span>
+                                <p class="text-white text-xs font-bold uppercase tracking-widest">Video: Newtonian Pinch-Off</p>
+                                <p class="text-slate-500 text-[9px] mt-1 italic">[ Insert Video Source Here ]</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-blue-600 font-bold text-[10px] uppercase mb-3 tracking-widest">Result: Singularity Analysis</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Analyzing self-similar pinch-off singularities for high-precision droplet generation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Other dripping tabs logic follows the same nesting pattern -->
+                    <div id="dripping-surfactant" class="content-wrapper dripping-content flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0">
+                             <!-- PLACEHOLDER FOR VIDEO -->
+                            <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center p-8 text-center">
+                                <span class="text-blue-400 mb-4 scale-125">🌊</span>
+                                <p class="text-white text-xs font-bold uppercase tracking-widest">Video: Surfactant Effects</p>
+                                <p class="text-slate-500 text-[9px] mt-1 italic">[ Insert Video Source Here ]</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-blue-600 font-bold text-[10px] uppercase mb-3 tracking-widest">Result: Marangoni Stress</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Investigating soluble surfactants on neck thinning and satellite prevention.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dripping-suspension" class="content-wrapper dripping-content flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0">
+                             <!-- PLACEHOLDER FOR VIDEO -->
+                            <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center p-8 text-center">
+                                <span class="text-blue-300 mb-4 scale-125">⚛️</span>
+                                <p class="text-white text-xs font-bold uppercase tracking-widest">Video: Particulate Breakup</p>
+                                <p class="text-slate-500 text-[9px] mt-1 italic">[ Insert Video Source Here ]</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-blue-600 font-bold text-[10px] uppercase mb-3 tracking-widest">Result: Granular Flow</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Dynamics of dense suspensions near the break-off point for DIW optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dripping-yield" class="content-wrapper dripping-content flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0">
+                             <!-- PLACEHOLDER FOR VIDEO -->
+                            <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center p-8 text-center">
+                                <span class="text-blue-200 mb-4 scale-125">🌀</span>
+                                <p class="text-white text-xs font-bold uppercase tracking-widest">Video: Yield Stress Coiling</p>
+                                <p class="text-slate-500 text-[9px] mt-1 italic">[ Insert Video Source Here ]</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-blue-600 font-bold text-[10px] uppercase mb-3 tracking-widest">Result: Buckling Instability</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Fluid buckling dynamics critical for non-Newtonian material printing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: THIN FILM DYNAMICS -->
+            <div class="project-card">
+                <div class="mb-4 card-header-fixed">
+                    <div class="flex flex-wrap items-center gap-y-2 gap-x-3 mb-2 text-[9px] font-bold uppercase tracking-widest border-b border-gray-100 pb-2">
+                        <div class="flex items-center gap-1">
+                            <span class="text-gray-400">Prj ID:</span>
+                            <span class="bg-sky-50 text-sky-700 px-2 py-0.5 rounded border border-sky-100">MPF-TF-002</span>
+                        </div>
+                        <span class="text-gray-300">|</span>
+                        <div class="flex items-center gap-1">
+                            <span class="text-gray-400">Pub Ref:</span>
+                            <span class="text-slate-500">Phy.Rev.Fluids-2024</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-2xl font-extrabold text-gray-900 leading-tight">Thin Film Dynamics</h3>
+                        <span class="text-sky-600 text-2xl">🧶</span>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto mb-1">
+                        <button onclick="switchFilmTab('fibre')" id="tab-btn-fibre" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-sky-100 bg-sky-600 text-white transition-all">Fibre</button>
+                        <button onclick="switchFilmTab('sphere')" id="tab-btn-sphere" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-gray-500 hover:bg-slate-50 transition-all">Sphere</button>
+                        <button onclick="switchFilmTab('cone')" id="tab-btn-cone" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-gray-500 hover:bg-slate-50 transition-all">Cone</button>
+                    </div>
+                </div>
+                <div class="relative flex-grow flex flex-col">
+                    <div id="film-fibre" class="content-wrapper film-content active flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0">
+                             <!-- PLACEHOLDER FOR VIDEO -->
+                             <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center p-8 text-center group cursor-pointer">
+                                <span class="text-sky-500 mb-4 scale-125"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12l-18 10v-20l18 10z"/></svg></span>
+                                <p class="text-white text-xs font-bold uppercase tracking-widest">DNS: Coating on Fibre</p>
+                                <p class="text-slate-500 text-[9px] mt-1 italic">[ Insert Video Source Here ]</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-sky-600 font-bold text-[10px] uppercase mb-3 tracking-widest">Fibre Coating</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Rayleigh-Plateau instability on cylindrical substrates.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="film-sphere" class="content-wrapper film-content flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0">
+                             <!-- PLACEHOLDER FOR VIDEO -->
+                             <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center p-8 text-center group cursor-pointer">
+                                <span class="text-sky-400 mb-4 scale-125"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12l-18 10v-20l18 10z"/></svg></span>
+                                <p class="text-white text-xs font-bold uppercase tracking-widest">Video: Flow over Sphere</p>
+                                <p class="text-slate-500 text-[9px] mt-1 italic">[ Insert Video Source Here ]</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-sky-600 font-bold text-[10px] uppercase mb-3 tracking-widest">Sphere Flow</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Modeling thin-film drainage over spherical particles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="film-cone" class="content-wrapper film-content flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0">
+                             <!-- PLACEHOLDER FOR VIDEO -->
+                             <div class="absolute inset-0 bg-slate-900 flex flex-col items-center justify-center p-8 text-center group cursor-pointer">
+                                <span class="text-sky-300 mb-4 scale-125"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12l-18 10v-20l18 10z"/></svg></span>
+                                <p class="text-white text-xs font-bold uppercase tracking-widest">Video: Conical Flow</p>
+                                <p class="text-slate-500 text-[9px] mt-1 italic">[ Insert Video Source Here ]</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-sky-600 font-bold text-[10px] uppercase mb-3 tracking-widest">Conical Flow</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Centrifugal spreading on conical geometries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: ULTRASONIC ATOMIZATION -->
+            <div class="project-card">
+                <div class="mb-4 card-header-fixed">
+                    <div class="flex flex-wrap items-center gap-y-2 gap-x-3 mb-2 text-[9px] font-bold uppercase tracking-widest border-b border-gray-100 pb-2">
+                        <div class="flex items-center gap-1">
+                            <span class="text-gray-400">Prj ID:</span>
+                            <span class="bg-cyan-50 text-cyan-700 px-2 py-0.5 rounded border border-cyan-100">MPF-UA-003</span>
+                        </div>
+                        <span class="text-gray-300">|</span>
+                        <div class="flex items-center gap-1">
+                            <span class="text-gray-400">Video Ref:</span>
+                            <span class="text-slate-500">APS-V0083</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mb-2 leading-tight">Ultrasonic Atomization</h3>
+                    <div class="flex flex-wrap gap-2 mt-auto mb-1">
+                        <button onclick="switchUltraTab('bulk')" id="tab-btn-bulk" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-cyan-100 bg-cyan-600 text-white transition-all">Bulk Fluid</button>
+                        <button onclick="switchUltraTab('droplet')" id="tab-btn-droplet" class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-gray-500 hover:bg-slate-50 transition-all">Droplet</button>
+                    </div>
+                </div>
+                <div class="relative flex-grow flex flex-col">
+                    <div id="ultra-bulk" class="content-wrapper ultra-content active flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0">
+                            <iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/pRIGowWIYsk?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-cyan-700 font-bold text-[10px] uppercase mb-3 tracking-widest">Fountain & Mist</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Transition from capillary waves to ligament detachment for Fogponics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ultra-droplet" class="content-wrapper ultra-content flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0"><p class="text-white text-xs font-bold uppercase">Droplet Atomization Video</p></div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-cyan-700 font-bold text-[10px] uppercase mb-3 tracking-widest">Droplet Levitation</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Star-shape oscillations in levitated droplets for medical nebulization.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 4: CENTRIFUGED JET -->
+            <div class="project-card">
+                <div class="mb-4 card-header-fixed">
+                    <div class="flex flex-wrap items-center gap-y-2 gap-x-3 mb-2 text-[9px] font-bold uppercase tracking-widest border-b border-gray-100 pb-2">
+                        <div class="flex items-center gap-1">
+                            <span class="text-gray-400">Prj ID:</span>
+                            <span class="bg-violet-50 text-violet-700 px-2 py-0.5 rounded border border-violet-100">MPF-CJ-004</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mb-2 leading-tight">Centrifuged Jet Instability</h3>
+                    <div class="flex flex-wrap gap-2 mt-auto mb-1">
+                        <span class="text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-violet-100 bg-violet-600 text-white">Physics Overview</span>
+                    </div>
+                </div>
+                <div class="relative flex-grow flex flex-col">
+                    <div class="content-wrapper active flex-grow">
+                        <div class="video-placeholder mb-6 flex-shrink-0"><p class="text-white text-xs font-bold uppercase">Curved Jet Simulation</p></div>
+                        <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 description-box shadow-sm h-full">
+                            <div>
+                                <h4 class="text-violet-700 font-bold text-[10px] uppercase mb-3 tracking-widest">Rotational Breakup</h4>
+                                <p class="text-sm text-gray-600 leading-relaxed">Non-linear trajectory and wind-induced breakup modes at high rotational speeds.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Technical Footer -->
+        <div class="bg-gray-900 rounded-[3rem] p-12 text-center text-white mb-16 relative overflow-hidden">
+            <h3 class="text-2xl font-extrabold mb-6 tracking-widest uppercase italic">servicing the science.</h3>
+            <p class="text-sm text-gray-300 max-w-4xl mx-auto leading-relaxed mb-10">
+                The synergy of <b>Experimental Discovery, DNS Refinement, and Prototyping</b> determines the impact of our scientific and industrial contributions.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="openings.html" class="bg-blue-600 px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-blue-900 transition-all">Join the Research</a>
+            </div>
+            <div class="absolute -top-32 -right-32 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]"></div>
+        </div>
+
+        <!-- Related Verticals (New Section) -->
+        <div class="mb-12 border-t border-gray-100 pt-12">
+            <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">Explore Other Innovation Engines</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Clean Energy Link -->
+                <a href="cleanenergy.html" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:border-emerald-500 hover:shadow-md transition-all group flex items-center gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">⚡</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1 group-hover:text-emerald-600 transition-colors">Clean Energy</h4>
+                        <p class="text-xs text-gray-500">Thermal Management & Micro-Power</p>
+                    </div>
+                    <div class="ml-auto text-emerald-400 group-hover:translate-x-1 transition-transform">→</div>
+                </a>
+
+                <!-- Biomechanics Link -->
+                <a href="biomechanics.html" class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:border-amber-500 hover:shadow-md transition-all group flex items-center gap-5">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">🦾</div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 text-sm mb-1 group-hover:text-amber-600 transition-colors">Biomechanics</h4>
+                        <p class="text-xs text-gray-500">Soft Robotics & Assistive Tech</p>
+                    </div>
+                    <div class="ml-auto text-amber-400 group-hover:translate-x-1 transition-transform">→</div>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-8 border-t border-gray-100 mt-auto flex-shrink-0">
+        <div class="container mx-auto px-6 md:px-12 max-w-[1440px]">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-gray-500">
+                <div class="text-center md:text-left">
+                    <p class="font-bold text-gray-900 text-base border-l-4 border-blue-600 pl-4">Prajñāpramāṇa <span class="text-blue-600">IP Studios</span></p>
+                    <p class="tracking-[0.2em] uppercase text-[10px] mt-2 font-medium">Hyderabad, Bengaluru (R&D) • Telangana (Regd)</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-[11px] mb-2 font-medium">Empowering deep-tech innovation through rigorous evidence.</p>
+                    <p class="text-[10px]">© 2025 Prajñāpramāṇa <span class="text-blue-600 font-bold">IP Studios</span> LLP</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchDrippingTab(tabId) {
+            document.querySelectorAll('.dripping-content').forEach(el => el.classList.remove('active'));
+            document.getElementById('dripping-' + tabId).classList.add('active');
+            ['newtonian', 'surfactant', 'suspension', 'yield'].forEach(t => {
+                const btn = document.getElementById('tab-btn-' + t);
+                btn.classList.toggle('bg-blue-600', t === tabId);
+                btn.classList.toggle('text-white', t === tabId);
+                btn.classList.toggle('bg-white', t !== tabId);
+                btn.classList.toggle('text-gray-500', t !== tabId);
+            });
+        }
+        function switchFilmTab(tabId) {
+            document.querySelectorAll('.film-content').forEach(el => el.classList.remove('active'));
+            document.getElementById('film-' + tabId).classList.add('active');
+            ['fibre', 'sphere', 'cone'].forEach(t => {
+                const btn = document.getElementById('tab-btn-' + t);
+                btn.classList.toggle('bg-sky-600', t === tabId);
+                btn.classList.toggle('text-white', t === tabId);
+                btn.classList.toggle('bg-white', t !== tabId);
+                btn.classList.toggle('text-gray-500', t !== tabId);
+            });
+        }
+        function switchUltraTab(tabId) {
+            document.querySelectorAll('.ultra-content').forEach(el => el.classList.remove('active'));
+            document.getElementById('ultra-' + tabId).classList.add('active');
+            ['bulk', 'droplet'].forEach(t => {
+                const btn = document.getElementById('tab-btn-' + t);
+                btn.classList.toggle('bg-cyan-600', t === tabId);
+                btn.classList.toggle('text-white', t === tabId);
+                btn.classList.toggle('bg-white', t !== tabId);
+                btn.classList.toggle('text-gray-500', t !== tabId);
+            });
+        }
+
+        // Mobile Menu logic
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
